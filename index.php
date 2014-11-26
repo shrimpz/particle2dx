@@ -92,7 +92,7 @@ if (isset($_REQUEST['type'])) {
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:mixi="http://mixi-platform.com/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:mixi="http://mixi-platform.com/ns#">
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -100,13 +100,13 @@ if (isset($_REQUEST['type'])) {
 
 <meta property="og:title" content="Particle2dx" />
 <meta property="og:type" content="tool" />
-<meta property="og:url" content="http://particle2dx.com/" />
+<meta property="og:url" content="http://test.weeplay.co/particle2dx/" />
 <meta property="og:locale" content="ja_JP" />
-<meta property="og:image" content="http://particle2dx.com/thumbnail.png" />
+<meta property="og:image" content="thumbnail.png" />
 <meta property="og:site_name" content="OnlineParticleEditor for cocos2dx CoronaSDK Win&Mac " />
 <meta property="og:description" content="OnlineParticleEditor for cocos2dx CoronaSDK Win&Mac " />
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
 <script>
 	boxsize=<?=$boxsize?>;
 </script>
@@ -149,18 +149,6 @@ if (isset($_REQUEST['type'])) {
 </style>
 </head>
 <body>
-
-<!-- facebook -->
-<div id="fb-root"></div>
-<script>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=254469811382518";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
 
 <?
 if (preg_match("/(iphone|ipod|android)/i",$ua)){
@@ -205,12 +193,6 @@ $plist_64=base64_encode($plist_temp);
 	 </script>
  
 	 <a href="javascript:$('#top_pane_shortcut').slideToggle(30); ">about</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-
-	 <!-- facebook -->
-	 <div class="fb-like" data-href="http://particle2dx.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-	 <!-- twitter -->
-<a href="https://twitter.com/intent/tweet?button_hashtag=particle2dx&text=My%20impression%20is...%20%20My%20feedback%20is....%20%20I%20found%20Bug....%20" class="twitter-hashtag-button" data-url="http://particle2dx.com">Tweet #particle2dx</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> 
 
 </div>
 
