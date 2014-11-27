@@ -545,7 +545,7 @@ $plist_64=base64_encode($plist_temp);
 									coronaJson2Emitter(e.target.result);
 									
 								}else{  //単体plist cocos2dx
-								     xmlStr2emitter(e.target.result);
+								     xmlStr2emitter(e.target.result,slot);
 								     //画面の中央に
 								     var size = cc.Director.getInstance().getWinSize();
 								     emitter[slot].setPosition(cc.p(size.width/2,size.height/2));
