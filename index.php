@@ -918,10 +918,20 @@ $plist_64=base64_encode($plist_temp);
 			</td><td>
 					<input type="range" id="startSize" name="startSize" mix="0" max="400" onMouseMove="
 						if (!flg_mousedown) return;
-						emitter[slot].setStartSize(parseFloat(this.value)); dumpToInputTag();" />
+						emitter[slot].setStartSize(parseFloat(this.value)); dumpToInputTag();" style="
+    					width: 70px;" />
+					<input type="text" size="4" id="startSize_text" name="startSize_text" onchange="
+							if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+							emitter[slot].setStartSize(parseFloat(this.value)); dumpToInputTag();" style="
+    					width: 50px;">
 					<input type="range" id="startSizeVar" name="startSize" mix="0" max="400" onMouseMove="
 						if (!flg_mousedown) return;
-						emitter[slot].setStartSizeVar(parseFloat(this.value)); dumpToInputTag();" />
+						emitter[slot].setStartSizeVar(parseFloat(this.value)); dumpToInputTag();" style="
+    					width: 70px;"/>
+					<input type="text" size="4" id="startSizeVar_text" name="startSizeVar_text" onchange="
+							if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+							emitter[slot].setStartSizeVar(parseFloat(this.value)); dumpToInputTag();" style="
+    					width: 50px;" />
 			</td></tr>
 			<tr><td>
 				Spin 
@@ -931,11 +941,21 @@ $plist_64=base64_encode($plist_temp);
 				<input type="range" id="startSpin" name="startSpin" min="-1440" max="1440" value="" 
 				onMouseMove="
 					if (!flg_mousedown) return;
-					emitter[slot].setStartSpin(parseFloat(this.value));dumpToInputTag();" />
+					emitter[slot].setStartSpin(parseFloat(this.value));dumpToInputTag();" style="
+    					width: 70px;"/>
+    			<input type="text" size="4" id="startSpin_text" name="startSpin_text" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						emitter[slot].setStartSpin(parseFloat(this.value));dumpToInputTag();" style="
+    					width: 50px;">
 				<input type="range" id="startSpin_var" name="startSpin_var" min="0" max="1440" value="" 
 				onMouseMove="
 					if (!flg_mousedown) return;
-					emitter[slot].setStartSpinVar(parseFloat(this.value));dumpToInputTag();" />		
+					emitter[slot].setStartSpinVar(parseFloat(this.value));dumpToInputTag();" style="
+    					width: 70px;"/>		
+    			<input type="text" size="4" id="startSpin_var_text" name="startSpin_var_text" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						emitter[slot].setStartSpinVar(parseFloat(this.value));dumpToInputTag();" style="
+    					width: 50px;">
 			</td></tr>
 			<tr><td>																
 					a 
@@ -946,8 +966,21 @@ $plist_64=base64_encode($plist_temp);
 					if (!flg_mousedown) return;
 					//$('img[id*=start_size_pic]').css('opacity',this.value);
 					updStartCol(); 
-					dumpToInputTag();" />
-				 <input type="range"  id="start_a_var" name="start_a_var"  mix="0" max="1" step="0.05" onMouseMove="updStartColVar(); dumpToInputTag();" /> 
+					dumpToInputTag();" style="
+    				width: 70px;"/>
+    			<input type="text" size="4" id="start_a_text" name="start_a_text" mix="0" max="1" step="0.05" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('start_a').value = this.value
+						updStartCol(); 
+						dumpToInputTag();" style="
+    					width: 50px;">
+				<input type="range"  id="start_a_var" name="start_a_var"  mix="0" max="1" step="0.05" onMouseMove="updStartColVar(); dumpToInputTag();" style="
+    					width: 70px;" /> 
+    			<input type="text" size="4" id="start_a_var_text" name="start_a_var_text" mix="0" max="1" step="0.05" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('start_a_var').value = this.value
+						updStartColVar(); dumpToInputTag();" style="
+    					width: 50px;">
 			</td></tr>
 			<tr><td>
 						r 
@@ -956,10 +989,22 @@ $plist_64=base64_encode($plist_temp);
 			</td><td>
 				<input type="range" size="5" id="start_r"     name="start_r"      mix="0" max="1" step="0.05" onMouseMove="
 				if (!flg_mousedown) return;
-				updStartCol();     dumpToInputTag();" />
+				updStartCol();     dumpToInputTag();" style="
+    					width: 70px;"/>
+    			<input type="text" size="4" id="start_r_text" name="start_r_text" mix="0" max="1" step="0.05" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; }
+						document.getElementById('start_r').value = this.value 
+						updStartCol(); dumpToInputTag();" style="
+    					width: 50px;">
 				<input type="range" size="5" id="start_r_var" name="start_r_var"  mix="0" max="1" step="0.05" onMouseMove="
 				if (!flg_mousedown) return;
-				updStartColVar();  dumpToInputTag();" />	
+				updStartColVar();  dumpToInputTag();" style="
+    					width: 70px;"/>
+    			<input type="text" size="4" id="start_r_var_text" name="start_r_var_text" mix="0" max="1" step="0.05" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('start_r_var').value = this.value 
+						updStartColVar(); dumpToInputTag();" style="
+    					width: 50px;">	
 			</td></tr>
 			<tr><td>					
 						g 
@@ -968,10 +1013,22 @@ $plist_64=base64_encode($plist_temp);
 			</td><td>
 				<input type="range" size="5" id="start_g"     name="start_g"      mix="0" max="1" step="0.05" onMouseMove="
 				if (!flg_mousedown) return;
-				updStartCol();     dumpToInputTag();" />
+				updStartCol();     dumpToInputTag();" style="
+    					width: 70px;"/>
+    			<input type="text" size="4" id="start_g_text" name="start_g_text" mix="0" max="1" step="0.05" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('start_g').value = this.value 
+						updStartCol(); dumpToInputTag();" style="
+    					width: 50px;">	
 				<input type="range" size="5" id="start_g_var" name="start_g_var"  mix="0" max="1" step="0.05" onMouseMove="
 				if (!flg_mousedown) return;
-				updStartColVar();  dumpToInputTag();" /> <br/>
+				updStartColVar();  dumpToInputTag();" style="
+    					width: 70px;"/> 
+    			<input type="text" size="4" id="start_g_var_text" name="start_g_var_text" mix="0" max="1" step="0.05" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('start_g_var').value = this.value 
+						updStartColVar(); dumpToInputTag();" style="
+    					width: 50px;">	<br/>
 			</td></tr>
 			<tr><td>	
 						b 
@@ -981,11 +1038,23 @@ $plist_64=base64_encode($plist_temp);
 				<input type="range" size="5" id="start_b"     name="start_b"      mix="0" max="1" step="0.05" 
 				onMouseMove="
 					if (!flg_mousedown) return;
-					updStartCol();     dumpToInputTag();" />
+					updStartCol();     dumpToInputTag();" style="
+    					width: 70px;"/>
+    			<input type="text" size="4" id="start_b_text" name="start_b_text" mix="0" max="1" step="0.05"  onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('start_b').value = this.value 
+						updStartCol(); dumpToInputTag();" style="
+    					width: 50px;">	
 				<input type="range" size="5" id="start_b_var" name="start_b_var"  mix="0" max="1" step="0.05" 
 				onMouseMove="
 					if (!flg_mousedown) return;
-					updStartColVar();  dumpToInputTag();" /> <br/>
+					updStartColVar();  dumpToInputTag();" style="
+    					width: 70px;"/> 
+    			<input type="text" size="4" id="start_b_var_text" name="start_b_var_text" mix="0" max="1" step="0.05"  onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('start_b_var').value = this.value 
+						updStartColVar(); dumpToInputTag();" style="
+    					width: 50px;"> <br/>
 			</td></tr>
 			</table>
 	
@@ -1002,11 +1071,21 @@ $plist_64=base64_encode($plist_temp);
 					<input type="range" id="endSize" name="endSize" mix="0" max="400" 
 					onMouseMove="
 						if (!flg_mousedown) return;
-						emitter[slot].setEndSize(parseFloat(this.value)); dumpToInputTag();" />
+						emitter[slot].setEndSize(parseFloat(this.value)); dumpToInputTag();" style="
+    					width: 70px;"/>
+	    			<input type="text" size="4" id="endSize_text" name="endSize_text" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						emitter[slot].setEndSize(parseFloat(this.value)); dumpToInputTag();" style="
+    					width: 50px;">
 					<input type="range" id="endSizeVar" name="endSize" mix="0" max="400" 
 					onMouseMove="
 						if (!flg_mousedown) return;
-						emitter[slot].setEndSizeVar(parseFloat(this.value)); dumpToInputTag();" />
+						emitter[slot].setEndSizeVar(parseFloat(this.value)); dumpToInputTag();" style="
+    					width: 70px;"/>
+	    			<input type="text" size="4" id="endSizeVar_text" name="endSizeVar_text" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						emitter[slot].setEndSizeVar(parseFloat(this.value)); dumpToInputTag();" style="
+    					width: 50px;">
 			</td></tr>
 			<tr><td>
 				Spin 
@@ -1016,13 +1095,21 @@ $plist_64=base64_encode($plist_temp);
 				<input type="range" id="endSpin" name="endSpin" min="-1440" max="1440" value="" 
 				onMouseMove="
 					if (!flg_mousedown) return;
-					emitter[slot].setEndSpin(parseFloat(this.value));dumpToInputTag();" />
-				
+					emitter[slot].setEndSpin(parseFloat(this.value));dumpToInputTag();" style="
+    					width: 70px;"/>
+    			<input type="text" size="4" id="endSpin_text" name="endSpin_text" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						emitter[slot].setEndSpin(parseFloat(this.value)); dumpToInputTag();" style="
+    					width: 50px;">
 				<input type="range" id="endSpin_var" name="endSpin_var" min="0" max="1440" value="" 
 				onMouseMove="
 					if (!flg_mousedown) return;
-					emitter[slot].setEndSpinVar(parseFloat(this.value));dumpToInputTag();" />		
-				
+					emitter[slot].setEndSpinVar(parseFloat(this.value));dumpToInputTag();" style="
+    					width: 70px;"/>		
+    			<input type="text" size="4" id="endSpin_var_text" name="endSpin_var_text" onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						emitter[slot].setEndSpinVar(parseFloat(this.value)); dumpToInputTag();" style="
+    					width: 50px;">
 			</td></tr>
 			<tr><td>
 					a
@@ -1032,11 +1119,24 @@ $plist_64=base64_encode($plist_temp);
 						<input type="range" id="end_a" name="end_a" min="0" max="1" step="0.05" 
 						onMouseMove="
 							if (!flg_mousedown) return;
-							//$('#img[id*=end_size_pic]').css('opacity',this.value); updEndCol(); dumpToInputTag();" />
+							//$('#img[id*=end_size_pic]').css('opacity',this.value); 
+							updEndCol(); dumpToInputTag();" style="
+    					width: 70px;"/>
+	    				<input type="text" size="4" id="end_a_text" name="end_a_text" min="0" max="1" step="0.05"  onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('end_a').value = this.value 
+						updEndCol(); dumpToInputTag();" style="
+    					width: 50px;">
 					    <input type="range" size="5" id="end_a_var" name="end_a_var" min="0" max="1" step="0.05"  
 					    onMouseMove="
 					    	if (!flg_mousedown) return;
-					    	updEndColVar();  dumpToInputTag();" /> <br/>
+					    	updEndColVar();  dumpToInputTag();" style="
+    					width: 70px;"/> 
+	    				<input type="text" size="4" id="end_a_var_text" name="end_a_var_text" min="0" max="1" step="0.05"  onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('end_a_var').value = this.value 
+						updEndColVar(); dumpToInputTag();" style="
+    					width: 50px;"><br/>
 			</td></tr>
 			<tr><td>
 						r     
@@ -1046,11 +1146,23 @@ $plist_64=base64_encode($plist_temp);
 						<input type="range" size="5" id="end_r"     name="end_r"      mix="0" max="1" step="0.05" 
 						onMouseMove="
 							if (!flg_mousedown) return;
-							updEndCol();     dumpToInputTag();" />
+							updEndCol();     dumpToInputTag();" style="
+    					width: 70px;"/>
+	    				<input type="text" size="4" id="end_r_text" name="end_r_text" mix="0" max="1" step="0.05"  onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('end_r').value = this.value 
+						updEndCol(); dumpToInputTag();" style="
+    					width: 50px;">
 						 <input type="range" size="5" id="end_r_var" name="end_r_var" mix="0" max="1" step="0.05" 
 						 onMouseMove="
 						 	if (!flg_mousedown) return;
-						 	updEndColVar();  dumpToInputTag();" /> <br/>
+						 	updEndColVar();  dumpToInputTag();" style="
+    					width: 70px;"/> 
+	    				<input type="text" size="4" id="end_r_var_text" name="end_r_var_text" mix="0" max="1" step="0.05"  onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('end_r_var').value = this.value 
+						updEndColVar(); dumpToInputTag();" style="
+    					width: 50px;"><br/>
 			</td></tr>
 			<tr><td>
 						g 
@@ -1060,11 +1172,23 @@ $plist_64=base64_encode($plist_temp);
 						<input type="range" size="5" id="end_g"     name="end_g"      mix="0" max="1" step="0.05" 
 						onMouseMove="
 							if (!flg_mousedown) return;
-							updEndCol();     dumpToInputTag();" />
+							updEndCol();     dumpToInputTag();" style="
+    					width: 70px;"/>
+	    				<input type="text" size="4" id="end_g_text" name="end_g_text" mix="0" max="1" step="0.05"  onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('end_g').value = this.value 
+						updEndCol(); dumpToInputTag();" style="
+    					width: 50px;">    					
 						 <input type="range" size="5" id="end_g_var" name="end_g_var" mix="0" max="1" step="0.05" 
 						 onMouseMove="
 						 	if (!flg_mousedown) return;
-						 	updEndColVar();  dumpToInputTag();" /> <br/>
+						 	updEndColVar();  dumpToInputTag();" style="
+    					width: 70px;"/> 
+	    				<input type="text" size="4" id="end_g_var_text" name="end_g_var_text" mix="0" max="1" step="0.05"  onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('end_g_var').value = this.value 
+						updEndColVar(); dumpToInputTag();" style="
+    					width: 50px;"><br/>
 			</td></tr>
 			<tr><td>
 						b     
@@ -1074,11 +1198,23 @@ $plist_64=base64_encode($plist_temp);
 						<input type="range" size="5" id="end_b"     name="end_b"      mix="0" max="1" step="0.05" 
 						onMouseMove="
 							if (!flg_mousedown) return;
-							updEndCol();     dumpToInputTag();" />
+							updEndCol();     dumpToInputTag();" style="
+    					width: 70px;"/>
+	    				<input type="text" size="4" id="end_b_text" name="end_b_text" mix="0" max="1" step="0.05"  onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('end_b').value = this.value 
+						updEndCol(); dumpToInputTag();" style="
+    					width: 50px;">  
 						 <input type="range" size="5" id="end_b_var" name="end_b_var" mix="0" max="1" step="0.05" 
 						 onMouseMove="
 						 	if (!flg_mousedown) return;
-						 	updEndColVar();  dumpToInputTag();" /> <br/>
+						 	updEndColVar();  dumpToInputTag();" style="
+    					width: 70px;"/> 
+    					<input type="text" size="4" id="end_b_var_text" name="end_b_var_text" mix="0" max="1" step="0.05"  onchange="
+						if (!$.isNumeric(this.value)) { alert('set number!'); return false; } 
+						document.getElementById('end_b_var').value = this.value 
+						updEndColVar(); dumpToInputTag();" style="
+    					width: 50px;"><br/>
 			</td></tr>
 			</table>
 
